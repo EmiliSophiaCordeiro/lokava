@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../../src/img/principal.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+header {
+    align-items: center;
+    background: transparent;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+
+
+#search {
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 400px;
+    max-width: 400px;
+}
+
+.categoria {
+    margin: 30px auto;
+    text-align: center;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.categoria h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.filmes {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+.filmes::-webkit-scrollbar {
+    height: 8px;
+}
+
+.filmes::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.filme {
+    text-align: center;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+.filme img {
+    width: 200px;
+    height: 30  0px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.filme img:hover {
+    transform: scale(1.1);
+}
+
+.filme p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+button{
+    background-color: rgba(83, 183, 223, 0.644);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(30, 121, 156, 0.644);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+button a { 
+    text-decoration: none;
+    color: white;
+}

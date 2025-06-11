@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <input type="text" id="search" placeholder="Pesquisar...">
+        </nav>
+    </header>
+
+    <main>
+        <section class="categoria">
+            <h2>SUSPENSE / TERROR</h2>
+            <div class="filmes">
+                <div class="filme">
+                    <img src="../../src/img/suspense/espiritos.jpg" alt="Espíritos">
+                    <p>Espíritos<br>A morte está ao seu lado</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/suspense/exorcista.jpg" alt="O Exorcista">
+                    <p>O exorcista<br>Crente</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/suspense/sozinho.jpg" alt="Sozinho">
+                    <p>Sozinho</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/suspense/espreita.jpg" alt="À espreita do mal">
+                    <p>À espreita do mal</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/suspense/livrai.jpg" alt="Livrai-nos do mal">
+                    <p>Livrai-nos do mal</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>ROMANCE</h2>
+            <div class="filmes">
+                <div class="filme">
+                    <img src="../../src/img/romance/midnight.jpg" alt="Midnight Sun">
+                    <p>Midnight Sun</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/romance/bones.jpg" alt="Bones and All">
+                    <p>Bones and All</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/romance/como.jpg" alt="Como eu era antes de você">
+                    <p>Como eu era antes de você</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/romance/culpa.jpg" alt="A culpa é das estrelas">
+                    <p>A culpa é das estrelas</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/romance/titanic.jpg" alt="Titanic">
+                    <p>Titanic</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/romance/nasce.jpg" alt="Nasce uma estrela">
+                    <p>Nasce uma estrela</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>AÇÃO</h2>
+            <div class="filmes">
+                <div class="filme">
+                    <img src="../../src/img/acao/velozes.jpg" alt="Velozes e Furiosos 10">
+                    <p>Velozes e Furiosos 10</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/acao/missao.jpg" alt="Missão Impossível">
+                    <p>Missão Impossível</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/acao/john.jpg" alt="John Wick">
+                    <p>John Wick</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/acao/resgaste.jpg" alt="Resgate">
+                    <p>Resgate</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/acao/mad.jpg" alt="Mad Max">
+                    <p>Mad Max</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>COMÉDIA</h2>
+            <div class="filmes">
+                <div class="filme">
+                    <img src="../../src/img/comedia/beber.jpg" alt="Se Beber Não Case">
+                    <p>Se Beber Não Case</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/comedia/click.jpg" alt="Click">
+                    <p>Click</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/comedia/deadpool.jpg" alt="Deadpool">
+                    <p>Deadpool</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/comedia/american.jpg" alt="American Pie">
+                    <p>American Pie</p>
+                </div>
+                <div class="filme">
+                    <img src="../../src/img/comedia/mexa.jpg" alt="Não Mexa com Zohan">
+                    <p>Não Mexa com Zohan</p>
+                </div>
+            </div>
+                <button><a href="../../index.html">Sair</a></button>
+        </section>
+
+    </main>
+
+    <script>
+        const searchInput = document.getElementById('search')
+
+        searchInput.addEventListener('input', function() {
+            const query = searchInput.value.toLowerCase()
+            document.querySelectorAll('.filme').forEach(filme => {
+                const title = filme.innerText.toLowerCase()
+                filme.style.display = title.includes(query) ? '' : 'none'
+            })
+        })
+    </script>
+
+</body>
+</html>
